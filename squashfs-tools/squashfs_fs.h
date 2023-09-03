@@ -292,23 +292,23 @@ typedef long long		squashfs_inode;
 struct squashfs_super_block {
 	unsigned int		s_magic;
 	unsigned int		inodes;
-	unsigned int		mkfs_time /* time of filesystem creation */;
-	unsigned int		block_size;
-	unsigned int		fragments;
-	unsigned short		compression;
-	unsigned short		block_log;
-	unsigned short		flags;
-	unsigned short		no_ids;
-	unsigned short		s_major;
-	unsigned short		s_minor;
-	squashfs_inode		root_inode;
+	unsigned int		s_major;
+	unsigned int		s_minor;
 	long long		bytes_used;
-	long long		id_table_start;
-	long long		xattr_id_table_start;
-	long long		inode_table_start;
-	long long		directory_table_start;
-	long long		fragment_table_start;
+	long long			mkfs_time /* time of filesystem creation */;
+	squashfs_inode		root_inode;
+	long long			compression;
 	long long		lookup_table_start;
+	long long			fragments;
+	long long		fragment_table_start;
+	long long		xattr_id_table_start;
+	long long			block_log;
+	long long		directory_table_start;
+	long long		inode_table_start;
+	long long			no_ids;
+	long long		id_table_start;
+	unsigned int		flags;
+	unsigned int		block_size;
 };
 
 struct squashfs_dir_index {
